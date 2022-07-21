@@ -1,21 +1,14 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import SafeAreaWrapper from '../../components/SafeAreaWrapper'
+import AvatarToolbar from '../../components/home-landing/AvatarToolbar'
 
 const HomeLanding = () => {
   return (
     <View style={styles.container}>
         <SafeAreaWrapper >
             {/* Header Toolbar */}
-            <View style={{
-                flexDirection: 'row'
-            }}>
-                <Text>
-                    Aman Shukla
-                </Text>
-                <Button title='2,345 Coins'/>
-                
-            </View>
+            <AvatarToolbar />
             {/* Searchbar */}
             <View>
                <Text>
@@ -47,7 +40,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         // justifyContent: 'center',
-        alignItems: 'center',
-        padding: 48,
+        padding: 36,
+        paddingTop : 64
       },
 })
