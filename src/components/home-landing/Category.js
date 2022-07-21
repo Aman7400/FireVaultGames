@@ -28,14 +28,14 @@ const styles = StyleSheet.create({
         marginBottom : 16
     },
     heading: {
-        fontSize: 24,
+        fontSize: 18,
         fontFamily: ubuntu.ExtraBold,
         marginBottom: 12
     },
     categoryItem: {
         flexDirection: 'row',
         marginRight: 16,
-        backgroundColor: "tomato",
+        backgroundColor: "#C40006",
         padding: 12,
         borderRadius: 16,
         alignItems: 'center',
@@ -54,6 +54,7 @@ function CategoryItem({category}) {
             }}>
                 {category.title}
             </Text>
+           
         </TouchableOpacity>
     )
 }

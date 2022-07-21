@@ -4,6 +4,7 @@ import SafeAreaWrapper from '../../components/SafeAreaWrapper'
 import AvatarToolbar from '../../components/home-landing/AvatarToolbar'
 import Searchbar from '../../components/home-landing/Searchbar'
 import Category from '../../components/home-landing/Category'
+import TrendingGames from '../../components/home-landing/TrendingGames'
 
 const HomeLanding = () => {
   return (
@@ -16,12 +17,7 @@ const HomeLanding = () => {
             {/* Category Menu */}
             <Category />
             {/* Trending Menu */}
-            <View style={{flexDirection: 'row'}}>
-                <Text>
-                    Trending Games
-                </Text>
-                <Button title='see all' />
-            </View>
+            <TrendingGames />
       </SafeAreaWrapper>
     </View>
   )
