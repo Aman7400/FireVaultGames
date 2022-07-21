@@ -1,6 +1,6 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { routes } from '../../constants/routes'
+import { homeStack, routes } from '../../constants/routes'
 import SafeAreaWrapper from '../../components/SafeAreaWrapper'
 import GetStartedButton from '../../components/GetStartedButton'
 import { ubuntu } from '../../constants/fonts'
@@ -13,7 +13,7 @@ const GetStarted = ({ navigation }) => {
         <View style={styles.textContainer}>
           <Text style={styles.heading}>Bringing gaming into your daily routine</Text>
           <Text style={styles.subHeading}>The best games, personalised by to your gaming preferences</Text>
-          <GetStartedButton title='Get started' onPress={() => navigation.navigate(routes.home)}  />
+          <GetStartedButton title='Get started' onPress={() => navigation.navigate(homeStack.gameDetails)}  />
         </View>
       </SafeAreaWrapper>
     </View>

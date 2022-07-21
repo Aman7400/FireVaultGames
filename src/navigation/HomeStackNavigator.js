@@ -1,0 +1,21 @@
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import { homeStack } from '../constants/routes';
+import AllGames from '../screens/AllGames/AllGames';
+import GameDetail from '../screens/GameDetail/GameDetail';
+import GetStarted from '../screens/GetStarted/GetStarted';
+
+const Stack = createNativeStackNavigator();
+
+
+const HomeStackNavigator = () => {
+    return <Stack.Navigator screenOptions={{
+        headerShown : false,
+      }}>
+          <Stack.Screen name={homeStack.getStarted} component={GetStarted}  />
+          <Stack.Screen name={homeStack.gameDetails} component={GameDetail}  />
+          <Stack.Screen name={homeStack.allGames} component={AllGames}  />
+      </Stack.Navigator>
+}
+
+export default HomeStackNavigator;

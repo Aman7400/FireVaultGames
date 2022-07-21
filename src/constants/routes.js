@@ -1,7 +1,14 @@
-export const routes = {
-    getStarted : 'Get Started',
+const tabs = {
     home : 'Home',
-    allGames : 'All Games',
     settings : 'Settings',
+    explore : 'Explore',
+}
+
+const homeStack  = {
+    getStarted : 'Get Started',
+    allGames : 'All Games',
     gameDetails : 'Game Details'
 }
+
+
+export {tabs, homeStack}

@@ -1,12 +1,12 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { routes } from '../../constants/routes'
+import { homeStack } from '../../constants/routes'
 
 const GameDetail = ({navigation}) => {
   return (
     <View>
       <Text>GameDetail</Text>
-      <Button title='See All' onPress={() => navigation.navigate(routes.allGames)}/>
+      <Button title='See All' onPress={() => navigation.navigate(homeStack.allGames)}/>
     </View>
   )
 }
