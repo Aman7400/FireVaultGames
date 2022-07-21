@@ -7,7 +7,8 @@ const tabs = {
 const homeStack  = {
     getStarted : 'Get Started',
     allGames : 'All Games',
-    gameDetails : 'Game Details'
+    gameDetails : 'Game Details',
+    landing : 'Landing',
 }
 
 

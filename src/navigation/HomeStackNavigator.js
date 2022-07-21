@@ -3,7 +3,7 @@ import React from 'react';
 import { homeStack } from '../constants/routes';
 import AllGames from '../screens/AllGames/AllGames';
 import GameDetail from '../screens/GameDetail/GameDetail';
-import GetStarted from '../screens/GetStarted/GetStarted';
+import HomeLanding from '../screens/HomeLanding/HomeLanding';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +12,7 @@ const HomeStackNavigator = () => {
     return <Stack.Navigator screenOptions={{
         headerShown : false,
       }}>
-          <Stack.Screen name={homeStack.getStarted} component={GetStarted}  />
+          <Stack.Screen name={homeStack.landing} component={HomeLanding}  />
           <Stack.Screen name={homeStack.gameDetails} component={GameDetail}  />
           <Stack.Screen name={homeStack.allGames} component={AllGames}  />
       </Stack.Navigator>
