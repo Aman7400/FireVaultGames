@@ -13,7 +13,8 @@ const TabNavigator = () => {
     return (
         <Tab.Navigator
           screenOptions={({ route }) => ({
-            tabBarIcon: (props) => getTabIcon(props,route)
+            tabBarIcon: (props) => getTabIcon(props,route),
+            headerShown : false
           })}
         >
           <Tab.Screen name={tabs.home} component={HomeStackNavigator} />
