@@ -2,6 +2,7 @@ import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import SafeAreaWrapper from '../../components/SafeAreaWrapper'
 import AvatarToolbar from '../../components/home-landing/AvatarToolbar'
+import Searchbar from '../../components/home-landing/Searchbar'
 
 const HomeLanding = () => {
   return (
@@ -10,11 +11,7 @@ const HomeLanding = () => {
             {/* Header Toolbar */}
             <AvatarToolbar />
             {/* Searchbar */}
-            <View>
-               <Text>
-               Search Here
-               </Text>
-            </View>
+            <Searchbar />
             {/* Category Menu */}
             <View style={{flexDirection: 'row'}}>
                 <Text>
