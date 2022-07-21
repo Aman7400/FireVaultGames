@@ -3,6 +3,7 @@ import React from 'react'
 import SafeAreaWrapper from '../../components/SafeAreaWrapper'
 import AvatarToolbar from '../../components/home-landing/AvatarToolbar'
 import Searchbar from '../../components/home-landing/Searchbar'
+import Category from '../../components/home-landing/Category'
 
 const HomeLanding = () => {
   return (
@@ -13,12 +14,7 @@ const HomeLanding = () => {
             {/* Searchbar */}
             <Searchbar />
             {/* Category Menu */}
-            <View style={{flexDirection: 'row'}}>
-                <Text>
-                    Category
-                </Text>
-                <Button title='see all' />
-            </View>
+            <Category />
             {/* Trending Menu */}
             <View style={{flexDirection: 'row'}}>
                 <Text>
