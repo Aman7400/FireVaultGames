@@ -18,7 +18,7 @@ const getTabIcon = ({focused,color,size},route) => {
                         
         }
 
-        return <Icon name={iconName} color={color} size={size} />
+        return <Icon name={iconName} color={focused ? 'red' : color} size={focused ? 30 : size} />
 
     }
 
