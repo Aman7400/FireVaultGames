@@ -14,7 +14,7 @@ export default [
         {   
             id: '#2',
             title : 'MAX PAYNE',
-            tag : ['Trending','Racing'],
+            tag : ['Trending','Shooting'],
             stats: {
                 downloads : 10,
                 rating : 'R',
@@ -26,20 +26,20 @@ export default [
         {
             id: '#3',
             title : 'DRAGON BALL',
-            tag :  ['Trending','Strategy'],
+            tag :  ['Trending','Action'],
             stats: {
                 downloads : 90,
                 rating : 'F',
                 size : 4.4
             },
-            imgUrl : require("../../assets/images/games/DBZ.jpeg"),
+            imgUrl : require("../../assets/images/games/dbz.png"),
             description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor iaculis justo, vulputate volutpat urna pellentesque eu. Aenean eleifend sapien est, non ultrices dui ultrices at. Morbi a ligula efficitur, bibendum augue scelerisque, commodo lectus. Integer luctus lacinia elit sed porttitor. In tincidunt nisl eget vulputate maximus. Nullam euismod ipsum ut mauris feugiat sagittis sed eget nisi. Morbi odio elit, blandit eu est finibus, semper gravida eros. Nullam ut ultrices neque. Nunc ac finibus justo.',
 
         },
         {
             id: '#4',
             title : 'ASPHALT',
-            tag :  ['Trending','Shooting'],
+            tag :  ['Trending','Racing'],
             stats: {
                 downloads : 1,
                 rating : 'O',
@@ -52,39 +52,39 @@ export default [
         {
             id: '#5',
             title : 'SIM CITY',
-            tag :  ['Upcoming','Action'],
+            tag :  ['Upcoming','Strategy'],
             stats: {
                 downloads : 1000,
                 rating : 'Q',
                 size : 12.4
             },
-            imgUrl: require("../../assets/images/games/asp.jpeg"),
+            imgUrl: require("../../assets/images/games/simcity.jpg"),
             description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor iaculis justo, vulputate volutpat urna pellentesque eu. Aenean eleifend sapien est, non ultrices dui ultrices at. Morbi a ligula efficitur, bibendum augue scelerisque, commodo lectus. Integer luctus lacinia elit sed porttitor. In tincidunt nisl eget vulputate maximus. Nullam euismod ipsum ut mauris feugiat sagittis sed eget nisi. Morbi odio elit, blandit eu est finibus, semper gravida eros. Nullam ut ultrices neque. Nunc ac finibus justo.',
 
         },
         {
             id: '#6',
             title : 'ANGRY BIRDS',
-            tag :  ['Trending','Strategy'],
+            tag :  ['Trending','Shooting'],
             stats: {
                 downloads : 1000,
                 rating : 'Q',
                 size : 12.4
             },
-            imgUrl: require("../../assets/images/games/asp.jpeg"),
+            imgUrl: require("../../assets/images/games/angry_bird.jpeg"),
             description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor iaculis justo, vulputate volutpat urna pellentesque eu. Aenean eleifend sapien est, non ultrices dui ultrices at. Morbi a ligula efficitur, bibendum augue scelerisque, commodo lectus. Integer luctus lacinia elit sed porttitor. In tincidunt nisl eget vulputate maximus. Nullam euismod ipsum ut mauris feugiat sagittis sed eget nisi. Morbi odio elit, blandit eu est finibus, semper gravida eros. Nullam ut ultrices neque. Nunc ac finibus justo.',
 
         },
         {
             id: '#7',
             title : 'HILL CLIMB',
-            tag :  ['Upcoming','Shooting'],
+            tag :  ['Upcoming','Racing'],
             stats: {
                 downloads : 1000,
                 rating : 'Q',
                 size : 12.4
             },
-            imgUrl: require("../../assets/images/games/asp.jpeg"),
+            imgUrl: require("../../assets/images/games/hill.png"),
             description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor iaculis justo, vulputate volutpat urna pellentesque eu. Aenean eleifend sapien est, non ultrices dui ultrices at. Morbi a ligula efficitur, bibendum augue scelerisque, commodo lectus. Integer luctus lacinia elit sed porttitor. In tincidunt nisl eget vulputate maximus. Nullam euismod ipsum ut mauris feugiat sagittis sed eget nisi. Morbi odio elit, blandit eu est finibus, semper gravida eros. Nullam ut ultrices neque. Nunc ac finibus justo.',
 
         },
