@@ -14,7 +14,9 @@ const HomeStackNavigator = () => {
       }}>
           <Stack.Screen name={homeStack.landing} component={HomeLanding}  />
           <Stack.Screen name={homeStack.gameDetails} component={GameDetail}  />
-          <Stack.Screen name={homeStack.allGames} component={AllGames}  />
+          <Stack.Screen name={homeStack.allGames} options={{
+            headerShown : true,
+          }} component={AllGames}  />
       </Stack.Navigator>
 }
 

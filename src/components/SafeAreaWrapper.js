@@ -3,7 +3,7 @@ import { SafeAreaView } from 'react-native'
 
 const SafeAreaWrapper = ({children, style}) => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={style || {}}>
         {children}
     </SafeAreaView>
   )
