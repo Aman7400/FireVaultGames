@@ -2,7 +2,7 @@ export default [
         {
             id: '#1',
             title : 'SPIDERMAN',
-            tag : 'Trending',
+            tag : ['Trending','Action'],
             stats: {
                 downloads : 100,
                 rating : 'P',
@@ -14,7 +14,7 @@ export default [
         {   
             id: '#2',
             title : 'MAX PAYNE',
-            tag : 'Trending',
+            tag : ['Trending','Racing'],
             stats: {
                 downloads : 10,
                 rating : 'R',
@@ -26,7 +26,7 @@ export default [
         {
             id: '#3',
             title : 'DRAGON BALL',
-            tag : 'Trending',
+            tag :  ['Trending','Strategy'],
             stats: {
                 downloads : 90,
                 rating : 'F',
@@ -39,7 +39,7 @@ export default [
         {
             id: '#4',
             title : 'ASPHALT',
-            tag : 'Trending',
+            tag :  ['Trending','Shooting'],
             stats: {
                 downloads : 1,
                 rating : 'O',
@@ -52,7 +52,7 @@ export default [
         {
             id: '#5',
             title : 'SOME RANDOM GAME',
-            tag : 'Upcoming',
+            tag :  ['Upcoming','Action'],
             stats: {
                 downloads : 1000,
                 rating : 'Q',
@@ -65,7 +65,7 @@ export default [
         {
             id: '#6',
             title : 'SOME RANDOM GAME 2',
-            tag : 'Upcoming',
+            tag :  ['Trending','Strategy'],
             stats: {
                 downloads : 1000,
                 rating : 'Q',
@@ -78,7 +78,7 @@ export default [
         {
             id: '#7',
             title : 'SOME RANDOM GAME 3',
-            tag : 'Upcoming',
+            tag :  ['Upcoming','Shooting'],
             stats: {
                 downloads : 1000,
                 rating : 'Q',

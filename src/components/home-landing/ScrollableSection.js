@@ -11,7 +11,7 @@ const ScrollabelSection = ({navigation,title}) => {
 
     console.log({title});
 
-    const filteredGames = games.filter(game => game.tag === title)
+    const filteredGames = games.filter(game => game.tag.includes(title))
 
     return (
         <View style={styles.container}>

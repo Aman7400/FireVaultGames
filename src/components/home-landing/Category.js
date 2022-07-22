@@ -3,6 +3,9 @@ import React from 'react'
 import { ubuntu } from '../../constants/fonts'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import categories from '../../constants/categories'
+import { useNavigation } from '@react-navigation/native';
+import { homeStack } from '../../constants/routes'
+
 
 const Category = () => {
     return (
@@ -43,8 +46,11 @@ const styles = StyleSheet.create({
 })
 
 function CategoryItem({category}) {
+  const navigation =   useNavigation()
     return (
-        <TouchableOpacity onPress={() => alert(category.title)} style={styles.categoryItem}>
+        <TouchableOpacity onPress={() => navigation.navigate(homeStack.allGames,{
+            tag : category.title
+        })} style={styles.categoryItem}>
             <Icon name={category.iconName} size={18} color='white' />
             <Text style={{
                 color: 'white',

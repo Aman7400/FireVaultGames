@@ -20,7 +20,7 @@ const AllGames = ({ navigation, route }) => {
 
   }, [])
 
-  const filteredGames = games.filter(game => game.tag === tag)
+  const filteredGames = games.filter(game => game.tag.includes(tag))
 
   return (
     <View style={styles.container}  >
