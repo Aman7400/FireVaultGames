@@ -37,7 +37,7 @@ const GameDetail = ({route,navigation}) => {
       {selectedGame.description}
       </Text>
       <TouchableOpacity
-      onPress={() => navigation.navigate(homeStack.allGames)}
+      onPress={() => alert(`Installing ${selectedGame.title}`)}
        style={{
         backgroundColor:'#C40006',
         margin:16,
