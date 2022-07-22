@@ -51,7 +51,7 @@ export default [
         },
         {
             id: '#5',
-            title : 'SOME RANDOM GAME',
+            title : 'SIM CITY',
             tag :  ['Upcoming','Action'],
             stats: {
                 downloads : 1000,
@@ -64,7 +64,7 @@ export default [
         },
         {
             id: '#6',
-            title : 'SOME RANDOM GAME 2',
+            title : 'ANGRY BIRDS',
             tag :  ['Trending','Strategy'],
             stats: {
                 downloads : 1000,
@@ -77,7 +77,7 @@ export default [
         },
         {
             id: '#7',
-            title : 'SOME RANDOM GAME 3',
+            title : 'HILL CLIMB',
             tag :  ['Upcoming','Shooting'],
             stats: {
                 downloads : 1000,

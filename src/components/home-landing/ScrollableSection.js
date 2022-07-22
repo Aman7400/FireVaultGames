@@ -9,8 +9,6 @@ import { homeStack } from '../../constants/routes'
 
 const ScrollabelSection = ({navigation,title}) => {
 
-    console.log({title});
-
     const filteredGames = games.filter(game => game.tag.includes(title))
 
     return (
@@ -62,12 +60,20 @@ const styles = StyleSheet.create({
 })
 
 function SectionGameItem({game,onPress}){
-    // let img = `${relImagePath}${game.imgUrl}`;
     return (
         <View style={{
             marginRight : 16,
             backgroundColor : '#FFFEFF',
-            borderRadius:16
+            borderRadius:16,
+            shadowColor: "#FFFFFF",
+            shadowOffset: {
+                width: 0,
+                height: 3,
+            },
+            shadowOpacity: 0.27,
+            shadowRadius: 4.65,
+            elevation: 6,
+   
         }} >
           <Image style={{width:200,height:280,borderTopLeftRadius: 16,borderTopRightRadius: 16,}} source={game.imgUrl} />
          <View style={{

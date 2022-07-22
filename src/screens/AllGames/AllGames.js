@@ -25,7 +25,6 @@ const AllGames = ({ navigation, route }) => {
   return (
     <View style={styles.container}  >
       <ScrollView showsVerticalScrollIndicator={false} vertical={true}>
-        <Text >All {tag} Games</Text>
 
         {
           filteredGames.map((game, i) => <AllGamesItem key={i} game={game} />)
@@ -50,14 +49,22 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     flexDirection: "row",
     backgroundColor: "white",
-    borderRadius: 16
+    borderRadius: 16,
+    shadowColor: "#F0F0F0",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
   }
 })
 
 const AllGamesItem = ({ game }) => {
   const navigation = useNavigation()
   return (
-    <TouchableOpacity  style={styles.allGamesItemWrapper}>
+    <TouchableOpacity style={styles.allGamesItemWrapper}>
 
       <View style={{ flex: 1 }}>
         <Image source={game.imgUrl} style={{
@@ -72,45 +79,45 @@ const AllGamesItem = ({ game }) => {
         <Text style={{
           fontSize: 16,
           fontFamily: ubuntu.ExtraBold,
-          marginVertical:2
+          marginVertical: 2
         }}>{game.title}</Text>
         <Text style={{
           fontSize: 8,
           fontFamily: ubuntu.ExtraBold,
-          color:"grey",
-          marginVertical:2
+          color: "grey",
+          marginVertical: 2
         }}>{game.description.substring(0, 100)}...</Text>
         <Text style={{
           fontSize: 12,
           fontFamily: ubuntu.Bold,
-          color:"#C40006",
-          marginVertical:2
+          color: "#C40006",
+          marginVertical: 2
 
         }}>
           {game.tag}
         </Text>
-        <TouchableOpacity 
-        style={{
-          backgroundColor:"#C40006",
-          padding:8,
-          alignItems: "center",
-          borderRadius:8,
-          marginVertical:4
-        }} 
-        onPress={() => navigation.navigate(homeStack.gameDetails, {
-      gameId: game.id,
-    })}>
+        <TouchableOpacity
+          style={{
+            backgroundColor: "#C40006",
+            padding: 8,
+            alignItems: "center",
+            borderRadius: 8,
+            marginVertical: 4
+          }}
+          onPress={() => navigation.navigate(homeStack.gameDetails, {
+            gameId: game.id,
+          })}>
 
           <Text style={{
             fontSize: 16,
-            color:"white",
+            color: "white",
             fontFamily: ubuntu.Bold
           }}>
-          View Details
+            View Details
           </Text>
 
         </TouchableOpacity>
-        
+
       </View>
 
     </TouchableOpacity>
