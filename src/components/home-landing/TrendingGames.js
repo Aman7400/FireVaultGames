@@ -3,10 +3,11 @@ import React from 'react'
 import { ubuntu } from '../../constants/fonts'
 import games from '../../constants/games'
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import { homeStack } from '../../constants/routes'
 
 
 
-const TrendingGames = () => {
+const TrendingGames = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.titleContainer}>
@@ -19,7 +20,7 @@ const TrendingGames = () => {
             >
                 {
                     games.trending.map((game, i) =>
-                        <TredingItem key={i} game={game} />)
+                        <TredingItem key={i} game={game} onPress={() => navigation.navigate(homeStack.gameDetails)}/>)
                 }
             </ScrollView>
         </View>
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
 
 })
 
-function TredingItem({game}){
+function TredingItem({game,onPress}){
     // let img = `${relImagePath}${game.imgUrl}`;
     return (
         <View style={{
@@ -66,7 +67,7 @@ function TredingItem({game}){
          <Text style={{fontFamily: ubuntu.Bold,}}>
             {game.title}
           </Text>
-          <Icon onPress={() => alert(game.title)} name="download" size={18} color="#C40006" />
+          <Icon onPress={onPress} name="download" size={18} color="#C40006" />
          </View>
         </View>
     )

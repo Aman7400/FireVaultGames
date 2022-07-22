@@ -6,7 +6,7 @@ import Searchbar from '../../components/home-landing/Searchbar'
 import Category from '../../components/home-landing/Category'
 import TrendingGames from '../../components/home-landing/TrendingGames'
 
-const HomeLanding = () => {
+const HomeLanding = ({navigation}) => {
   return (
     <View style={styles.container}>
         <SafeAreaWrapper >
@@ -17,7 +17,7 @@ const HomeLanding = () => {
             {/* Category Menu */}
             <Category />
             {/* Trending Menu */}
-            <TrendingGames />
+            <TrendingGames navigation={navigation} />
       </SafeAreaWrapper>
     </View>
   )
