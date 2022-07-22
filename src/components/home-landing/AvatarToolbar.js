@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import  Icon from 'react-native-vector-icons/FontAwesome5'
 import { ubuntu } from '../../constants/fonts'
 
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
     iconButton: {
         borderRadius : 24,
-        backgroundColor : '#FE7F39',
+        backgroundColor : '#C40006',
         padding : 8,
         flexDirection: 'row',
         alignItems: 'center',
@@ -28,17 +28,24 @@ const styles = StyleSheet.create({
 })
 
 function FireVaultCoinsButton() {
+
+    const [showCoins,setShowCoins] = useState(false);
+
+
     return (
         <TouchableOpacity style={styles.iconButton}>
-            <View style={{backgroundColor:'white',width:30,height:30,display: 'flex',alignItems: 'center',justifyContent: 'center',borderRadius : 18,}}>
-                <Icon name='crown' size={15} color='#FE7F39'   />
-            </View>
-            <View style={{
+            <TouchableOpacity onPress={() => setShowCoins(!showCoins)} style={{backgroundColor:'white',width:30,height:30,display: 'flex',alignItems: 'center',justifyContent: 'center',borderRadius : 18,}}>
+                <Icon name='crown' size={15} color="#C40006"   />
+            </TouchableOpacity>
+           {
+            showCoins && 
+             <View style={{
                 marginHorizontal : 4,
                 marginLeft: 8
             }}>
                 <Text style={{color:'white', fontFamily : ubuntu.ExtraBold,}}>2,3453</Text>
             </View>
+           }
         </TouchableOpacity>
     )
 }
