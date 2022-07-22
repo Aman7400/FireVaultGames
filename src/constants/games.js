@@ -52,7 +52,33 @@ export default [
         {
             id: '#5',
             title : 'SOME RANDOM GAME',
-            tag : 'ACTION',
+            tag : 'Upcoming',
+            stats: {
+                downloads : 1000,
+                rating : 'Q',
+                size : 12.4
+            },
+            imgUrl: require("../../assets/images/games/asp.jpeg"),
+            description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor iaculis justo, vulputate volutpat urna pellentesque eu. Aenean eleifend sapien est, non ultrices dui ultrices at. Morbi a ligula efficitur, bibendum augue scelerisque, commodo lectus. Integer luctus lacinia elit sed porttitor. In tincidunt nisl eget vulputate maximus. Nullam euismod ipsum ut mauris feugiat sagittis sed eget nisi. Morbi odio elit, blandit eu est finibus, semper gravida eros. Nullam ut ultrices neque. Nunc ac finibus justo.',
+
+        },
+        {
+            id: '#6',
+            title : 'SOME RANDOM GAME 2',
+            tag : 'Upcoming',
+            stats: {
+                downloads : 1000,
+                rating : 'Q',
+                size : 12.4
+            },
+            imgUrl: require("../../assets/images/games/asp.jpeg"),
+            description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor iaculis justo, vulputate volutpat urna pellentesque eu. Aenean eleifend sapien est, non ultrices dui ultrices at. Morbi a ligula efficitur, bibendum augue scelerisque, commodo lectus. Integer luctus lacinia elit sed porttitor. In tincidunt nisl eget vulputate maximus. Nullam euismod ipsum ut mauris feugiat sagittis sed eget nisi. Morbi odio elit, blandit eu est finibus, semper gravida eros. Nullam ut ultrices neque. Nunc ac finibus justo.',
+
+        },
+        {
+            id: '#7',
+            title : 'SOME RANDOM GAME 3',
+            tag : 'Upcoming',
             stats: {
                 downloads : 1000,
                 rating : 'Q',
