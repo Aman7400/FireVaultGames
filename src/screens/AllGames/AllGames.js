@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
 const AllGamesItem = ({ game }) => {
   const navigation = useNavigation()
   return (
-    <TouchableOpacity style={styles.allGamesItemWrapper}>
+    <View style={styles.allGamesItemWrapper}>
 
       <View style={{ flex: 1 }}>
         <Image source={game.imgUrl} style={{
@@ -86,23 +86,14 @@ const AllGamesItem = ({ game }) => {
           fontFamily: ubuntu.ExtraBold,
           color: "grey",
           marginVertical: 2
-        }}>{game.description.substring(0, 100)}...</Text>
-        <Text style={{
-          fontSize: 12,
-          fontFamily: ubuntu.Bold,
-          color: "#C40006",
-          marginVertical: 2
-
-        }}>
-          {game.tag}
-        </Text>
+        }}>{game.description.substring(0, 150)}...</Text>
         <TouchableOpacity
           style={{
             backgroundColor: "#C40006",
-            padding: 8,
+            padding: 12,
             alignItems: "center",
             borderRadius: 8,
-            marginVertical: 4
+            marginVertical: 5
           }}
           onPress={() => navigation.navigate(homeStack.gameDetails, {
             gameId: game.id,
@@ -120,6 +111,6 @@ const AllGamesItem = ({ game }) => {
 
       </View>
 
-    </TouchableOpacity>
+    </View>
   )
 }
