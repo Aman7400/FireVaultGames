@@ -2,6 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import  Icon from 'react-native-vector-icons/FontAwesome5'
 import { ubuntu } from '../../constants/fonts'
+import grettings from '../../utils/grettings'
 
 const AvatarToolbar = () => {
   return (
@@ -51,6 +52,7 @@ function FireVaultCoinsButton() {
 }
 
 function PersonalGreetings() {
+    let greeting = grettings()
     return (
         <View>
             <Text style={{
@@ -63,7 +65,7 @@ function PersonalGreetings() {
                 fontFamily: ubuntu.Medium,
                 color: 'gray',fontSize: 16
             }}>
-                Good Morning
+                {greeting}
             </Text>
         </View>
     )
