@@ -19,8 +19,10 @@ const TrendingGames = ({navigation}) => {
                 horizontal={true}
             >
                 {
-                    games.trending.map((game, i) =>
-                        <TredingItem key={i} game={game} onPress={() => navigation.navigate(homeStack.gameDetails)}/>)
+                    games.filter(game => game.tag === 'Trending').map((game, i) =>
+                        <TredingItem key={i} game={game} onPress={() => navigation.navigate(homeStack.gameDetails,{
+                            gameId: game.id
+                        })}/>)
                 }
             </ScrollView>
         </View>

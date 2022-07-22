@@ -5,14 +5,22 @@ import SafeAreaWrapper from '../../components/SafeAreaWrapper'
 import  Icon from 'react-native-vector-icons/FontAwesome5'
 import { ubuntu } from '../../constants/fonts'
 import BackButton from '../../components/BackButton'
+import games from '../../constants/games'
 
-const GameDetail = ({navigation}) => {
+const GameDetail = ({route,navigation}) => {
+
+  const {gameId} = route.params;
+
+  const selectedGame = games.filter(games => games.id === gameId)[0]
+
+  console.log({selectedGame});
+
   return (
     <SafeAreaWrapper style={{
       position: 'relative'
     }}>
       <BackButton onPress={() => navigation.goBack()}/>
-      <Image style={{width:"100%",height:360}} resizeMode="cover" source={require("../../../assets/images/games/spidy.webp")} />
+      <Image style={{width:"100%",height:360}} resizeMode="cover" source={selectedGame.imgUrl} />
       <Text
       style={{
         fontFamily : ubuntu.ExtraBold,
@@ -20,13 +28,13 @@ const GameDetail = ({navigation}) => {
         marginTop:16,
         marginHorizontal:16
       }}
-      >Spider Man</Text>
-      <GameStats />
+      >{selectedGame.title}</Text>
+      <GameStats stats={selectedGame.stats} />
       <Text style={{
         fontFamily : ubuntu.Light,
         marginHorizontal:16
       }}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor iaculis justo, vulputate volutpat urna pellentesque eu. Aenean eleifend sapien est, non ultrices dui ultrices at. Morbi a ligula efficitur, bibendum augue scelerisque, commodo lectus. Integer luctus lacinia elit sed porttitor. In tincidunt nisl eget vulputate maximus. Nullam euismod ipsum ut mauris feugiat sagittis sed eget nisi. Morbi odio elit, blandit eu est finibus, semper gravida eros. Nullam ut ultrices neque. Nunc ac finibus justo.
+      {selectedGame.description}
       </Text>
       <TouchableOpacity
       onPress={() => navigation.navigate(homeStack.allGames)}
@@ -54,7 +62,8 @@ export default GameDetail
 const styles = StyleSheet.create({})
 
 
-function GameStats() {
+function GameStats({stats}) {
+  const {downloads,size,rating} = stats;
   return (
     <View style={{
       backgroundColor:"#E4E8EC",
@@ -75,7 +84,7 @@ function GameStats() {
           fontFamily : ubuntu.Medium,
           marginLeft:4,
           color:"#C40006"
-        }}>100M</Text>
+        }}>{downloads}M</Text>
       </View>
        {/* Rated */}
        <View style={{
@@ -90,7 +99,7 @@ function GameStats() {
           marginLeft:4,
           color:"#C40006"
         }}
-        > PR Rated</Text>
+        > {rating} Rated</Text>
       </View>
       {/* Size */}
       <View style={{
@@ -105,7 +114,7 @@ function GameStats() {
           marginLeft:4,
           color:"#C40006"
         }}
-        >1.6 GB</Text>
+        >{size} GB</Text>
       </View>
     </View>
   )
